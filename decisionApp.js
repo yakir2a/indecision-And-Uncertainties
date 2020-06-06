@@ -228,24 +228,6 @@ var decision = (function () {
         break
     }
   }
-  /*
-  Change to make:
-    new tree layout:
-      Decision -> childs(can be Decision or uncertainty)
-      Uncertainty -> childs(can be Decision or fills)
-                  -> can be fill (Decision have no Uncertainty)
-      fill -> empty table needed for the final phase (last "row" of fill will have benefit value)
-
-    input order:
-      start with indecision -> fill table -> ask indecision|uncertainty
-      indecision -> fill table -> ask indecision|uncertainty
-      uncertainty -> fill table -> ask indecision|Done
-
-    table_form onsubmit -> take filled value and store them, switch to next input phase
-    input_phase onsubmit -> switch to 'add indecision input'|'add uncertainty input'|final phase 'add benefit value'
-
-    table_benefit onsubmit -> start collaps benefit values -> print final result
-  */
 
   var table_build = function (table_nodes, stage, index) {
     var new_nodes = []
