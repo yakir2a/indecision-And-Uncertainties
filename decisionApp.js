@@ -35,8 +35,8 @@ var decision = (function () {
       mode.result = "ערך";
       mode.endInput = "הכנס את ערך לכל אפשרות"
     }
-    $("#main").empty();
-    $("#main").append(`<form
+    $("#mainApp").empty();
+    $("#mainApp").append(`<form
       id="input"
       action="javascript:void(0);"
       onsubmit="decision.stage('initialize',event)"
