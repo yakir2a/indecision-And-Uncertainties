@@ -3,5 +3,4 @@ an app to help you make a decision from uncertainties and probabilities base on 
 
 this app is in hebrew and will work with dir=rtl html
 
-
-Demo Site ->[indecision-And-Uncertainties](https://desicion.coi.co.il/)
+this was a project made for students who study "Industrial engineering"
