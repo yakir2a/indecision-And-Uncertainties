@@ -1,11 +1,22 @@
-body {
-  align-content: center;
-  display: block;
-  margin-left: 10%;
-  background: white;
-  color: #323232;
-  font-family: Helvetica neue, roboto;
-  /*font-size: 0.5rem;*/
+body{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#personal,#business{
+  margin: 10px;
+}
+#modePick{
+  display: flex;
+  justify-content: center;
+  
+  width: 40%;
+}
+
+table.first,.result{
+  background-color:rgba(255,255,255,0.3);
 }
 table.first,
 td{
@@ -20,13 +31,13 @@ table:not(.first) tr:first-child td {
   border-top: 0;
 }
 table:not(.first) tr td:first-child {
-  border-left: 0;
+  border-right: 0;
 }
 table:not(.first) tr:last-child td {
   border-bottom: 0;
 }
 table:not(.first) tr td:last-child {
-  border-right: 0;
+  border-left: 0;
 }
 #childs > td{
   border-top: 0;
@@ -69,8 +80,12 @@ input[type=number],input[type=field]{
 .result{
   margin-left: auto;
   margin-right: auto;
-
+  
 }
 .result td{
   border: 0 !important;
+  padding-left: 5px; 
+}
+.blur{
+  filter: blur(2px);
 }

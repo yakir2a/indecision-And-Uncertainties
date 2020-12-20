@@ -1,14 +1,8 @@
 <html dir="rtl">
   <body>
-    <form
-      id="input"
-      action="javascript:void(0);"
-      onsubmit="decision.stage('initialize',event)"
-    >
-      <label for="input">מה מספר ההתלבטויות שלך?</label>
-      <input id="input" type="number" min="1" value="1" required />
-      <input value="next" type="submit" />
-    </form>
-    <div id="tables"></div>
+    <div id="modePick">
+      <button id="personal" onclick="decision.pickMode('personal')">אישי</button>
+      <button id="business" onclick="decision.pickMode('business')">עסקי</button>
+    </div>
   </body>
 </html>
