@@ -28,11 +28,11 @@ var decision = (function () {
   var pickMode = function (choice) {
     if (choice == 'personal') {
       mode.limit = 'step="0.1" min="-10" max="10"';
-      mode.result = "תועלת";
+      mode.result = "תועלת אישית";
       mode.endInput = "הכנס את התועלת לכל אפשרות (מינוס 10 עד 10)"
     } else if(choice == 'business') {
       mode.limit = 'step="0.1"';
-      mode.result = "ערך";
+      mode.result = "תועלת כספית";
       mode.endInput = "הכנס את ערך לכל אפשרות"
     }
     $("#mainApp").empty();
@@ -43,7 +43,7 @@ var decision = (function () {
     >
       <label for="input">מה מספר ההתלבטויות שלך?</label>
       <input id="input" type="number" min="1" value="1" required />
-      <input value="next" type="submit" />
+      <input value="אישור" type="submit" />
     </form>
     <div id="tables"></div>`);
   };
@@ -55,7 +55,7 @@ var decision = (function () {
     state.counter = count();
     $("#tables")
       .append(`<form id="input_table" action="javascript:void(0);" onsubmit="decision.stage('table_indecision_input',event)" required>\
-    <input id="table_submit" type="submit" value="submit"></form>`);
+    <input id="table_submit" value="אישור" type="submit" value="submit"></form>`);
     for (i = 0; i < indecisionCount; i++) {
       //set root decision's
       state.indecision.push(
@@ -159,7 +159,7 @@ var decision = (function () {
             table_build(table, state.stage, index);
           });
           $(`#input_table`).append(
-            `<input id="table_submit" type="submit" value="submit">`
+            `<input id="table_submit" value="אישור" type="submit" value="submit">`
           );
           state.stage = "table_build";
         }
@@ -528,7 +528,7 @@ var decision = (function () {
       );
     });
     $("form#input").attr("onsubmit", "decision.stage('table_build',event)");
-    $("form#input").append('<input id="input" type="submit" value="submit">');
+    $("form#input").append('<input id="input" value="אישור" type="submit" value="submit">');
   };
 
   var filling_uncertainty = function () {
@@ -554,7 +554,7 @@ var decision = (function () {
       );
     });
     $("form#input").attr("onsubmit", "decision.stage('table_build',event)");
-    $("form#input").append('<input id="input" type="submit" value="submit">');
+    $("form#input").append('<input id="input" type="submit" value="אישור" value="submit">');
   };
 
   var checkProbabilty = function () {
